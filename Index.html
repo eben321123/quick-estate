@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #0066cc;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004a99;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Real Estate Search</h1>
+    <form>
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location">
+        <label for="price">Price Range:</label>
+        <input type="text" id="price" name="price">
+        <button type="submit">Search</button>
+    </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const location = document.getElementById('location').value;
+            const price = document.getElementById('price').value;
+            alert('Location: ' + location + '\nPrice: ' + price);
+        });
+    </script>
+</body>
+</html>
