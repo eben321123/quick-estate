@@ -3,58 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Search</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-            color: #0066cc;
-        }
-        form {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        input, button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-        }
-        button {
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #004a99;
-        }
-    </style>
+    <title>QuickEstate - Real Estate Search</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to the Real Estate Search</h1>
-    <form>
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location">
-        <label for="price">Price Range:</label>
-        <input type="text" id="price" name="price">
-        <button type="submit">Search</button>
-    </form>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <h1>QuickEstate</h1>
+            <p>Find your ideal home quickly and easily.</p>
+            <a href="/login" class="login-btn">Log in with MLS</a>
+        </div>
+    </header>
 
-    <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
-            const location = document.getElementById('location').value;
-            const price = document.getElementById('price').value;
-            alert('Location: ' + location + '\nPrice: ' + price);
-        });
-    </script>
+    <!-- Main Content Section -->
+    <main>
+        <!-- Search Form Container -->
+        <div class="form-container">
+            <form id="search-form">
+                <div class="form-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter a city, neighborhood, etc." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price Range:</label>
+                    <input type="text" id="price" name="price" placeholder="e.g. 500000 - 700000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bedrooms">Bedrooms:</label>
+                    <input type="number" id="bedrooms" name="bedrooms" placeholder="Number of bedrooms">
+                </div>
+
+                <div class="form-group">
+                    <label for="bathrooms">Bathrooms:</label>
+                    <input type="number" id="bathrooms" name="bathrooms" placeholder="Number of bathrooms">
+                </div>
+
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" class="results">
+            <!-- Search results will be displayed here dynamically -->
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 QuickEstate. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
