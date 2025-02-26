@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickEstate - Real Estate Search</title>
+    <title>QuickEstate - Find Your Dream Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <header class="header">
         <div class="header-content">
             <h1>QuickEstate</h1>
-            <p>Find your ideal home quickly and easily.</p>
+            <p>Find your ideal home with AI-powered search</p>
             <a href="/login" class="login-btn">Log in with MLS</a>
         </div>
     </header>
@@ -41,6 +41,46 @@
                     <input type="number" id="bathrooms" name="bathrooms" placeholder="Number of bathrooms">
                 </div>
 
+                <!-- See More Filters Button -->
+                <button type="button" id="see-more-btn" class="btn">See More Filters</button>
+
+                <div id="advanced-filters" class="hidden">
+                    <div class="form-group">
+                        <label for="status">Property Status:</label>
+                        <select id="status" name="status">
+                            <option value="active">Active</option>
+                            <option value="coming_soon">Coming Soon</option>
+                            <option value="under_contract">Under Contract</option>
+                            <option value="closed">Closed</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="basement">Basement:</label>
+                        <select id="basement" name="basement">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="financing">Accepted Financing:</label>
+                        <select id="financing" name="financing">
+                            <option value="standard">Standard</option>
+                            <option value="fha">FHA</option>
+                            <option value="va">VA</option>
+                            <option value="conventional">Conventional</option>
+                            <option value="cash">Cash</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year-built">Year Built (Min - Max):</label>
+                        <input type="text" id="year-built" name="year-built" placeholder="e.g. 1990 - 2023">
+                    </div>
+                </div>
+                
                 <button type="submit" class="btn">Search</button>
             </form>
         </div>
